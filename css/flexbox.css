@@ -55,11 +55,44 @@
     display: none;
 }
 
+/* Videos */
+
+.videos__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.videos__item{
+    width: 272px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.descripcion-video{
+    display: flex;
+    margin-top: 10px;
+}
+
+.descripcion-video img{
+    width: 32px;
+    height: 32px;
+}
+
+.detalles__video h3{
+    margin-bottom: 16px;
+}
+
 /* Seccion Rodapie */
 .rodapie__container{
     display: flex;
     flex-flow: column wrap;
+    padding-top: 12px;
+    margin-top: 52px;
 }
+
+
 
 /* width min 834px */
 
@@ -87,11 +120,12 @@
 }
 
 /* width min 1440px */
-@media(min-width: 1440px){
+@media (min-width: 1440px){
 
     /* Menu Lateral */
     .menu__container{
         width: 239px;
+        overflow: scroll;
     }
 
     .menu__lista:nth-child(2),
@@ -99,4 +133,34 @@
     .menu__lista:nth-child(4){
         display: flex;
     }
+
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__itens{
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse;
+    }
+
+    .videojuegos{
+        order: 1;
+    }
+
+    .peliculas{
+        order: 2;
+    }
+
+    .premium{
+        order: 3;
+    }
+
+
 }
